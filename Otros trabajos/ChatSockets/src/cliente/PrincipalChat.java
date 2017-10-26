@@ -2,6 +2,7 @@ package cliente;
 
 import java.awt.BorderLayout;
 import java.awt.Color;
+import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.EOFException;
@@ -14,6 +15,7 @@ import java.util.concurrent.Executors;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.*;
+import javax.swing.border.Border;
 
 /**Clase que se encarga de correr los threads de enviar y recibir texto
  * y de crear la interfaz grafica.
@@ -38,21 +40,29 @@ public class PrincipalChat extends JFrame{
         
         
         areaTexto = new JTextArea(); //Crear displayArea
+        areaTexto.setFont(new Font("Serif", Font.ITALIC, 16));
+        
+        
+        Border border = BorderFactory.createLineBorder(Color.BLACK);
+        areaTexto.setBorder(BorderFactory.createCompoundBorder(border, 
+        BorderFactory.createEmptyBorder(100, 100, 100, 100)));
+        
         areaTexto.setEditable(false);
         add(new JScrollPane(areaTexto), BorderLayout.CENTER);
-        areaTexto.setBackground(Color.orange); //Pone de color cyan al displayArea
-        areaTexto.setForeground(Color.BLACK); //pinta azul la letra en el displayArea
-        campoTexto.setForeground(Color.BLACK); //pinta toja la letra del mensaje a enviar
+        areaTexto.setBackground(Color.gray); //Pone de color cyan al displayArea
+        areaTexto.setForeground(Color.white); //pinta azul la letra en el displayArea
+        campoTexto.setForeground(Color.black); //pinta toja la letra del mensaje a enviar
        
         
         //Crea menu Archivo y submenu Salir, ademas agrega el submenu al menu
         JMenu menuArchivo = new JMenu("Archivo"); 
         JMenuItem salir = new JMenuItem("Salir");
-        menuArchivo.add(salir); //Agrega el submenu Salir al menu menuArchivo
+        //menuArchivo.add(salir); //Agrega el submenu Salir al menu menuArchivo
         
         JMenuBar barra = new JMenuBar(); //Crea la barra de menus
         setJMenuBar(barra); //Agrega barra de menus a la aplicacion
         barra.add(menuArchivo); //agrega menuArchivo a la barra de menus
+        barra.add(salir);
         
         //Accion que se realiza cuando se presiona el submenu Salir
         salir.addActionListener(new ActionListener() { //clase interna anonima
@@ -61,7 +71,7 @@ public class PrincipalChat extends JFrame{
                 }
         });
         
-        setSize(300, 320); //Establecer tamano a ventana
+        setSize(600, 500); //Establecer tamano a ventana
         setVisible(true); //Pone visible la ventana
     }
     
@@ -85,7 +95,7 @@ public class PrincipalChat extends JFrame{
         try {
             main.mostrarMensaje("Buscando Servidor ...");
             cliente = new Socket(InetAddress.getByName(ip), 11111); //comunicarme con el servidor
-            main.mostrarMensaje("Conectado a :" + cliente.getInetAddress().getHostName());
+            main.mostrarMensaje("Conectado al cliente :" + cliente.getInetAddress().getHostName());
     
             main.habilitarTexto(true); //habilita el texto
             

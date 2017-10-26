@@ -31,9 +31,9 @@ public class ThreadEnvia implements Runnable {
    //enviar objeto a cliente 
    private void enviarDatos(String mensaje){
       try {
-         salida.writeObject("Servidor>>> " + mensaje);
+         salida.writeObject("Recibe de Servidor >>> " + mensaje);
          salida.flush(); //flush salida a cliente
-         main.mostrarMensaje("Servidor>>> " + mensaje);
+         main.mostrarMensaje("Servidor envia >>> " + mensaje);
       } //Fin try
       catch (IOException ioException){ 
          main.mostrarMensaje("Error escribiendo Mensaje");
