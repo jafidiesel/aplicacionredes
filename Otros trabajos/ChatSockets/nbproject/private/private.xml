@@ -6,7 +6,7 @@
             <url>src/servidor/PrincipalChat.java</url>
             <bookmark id="1">
                 <name/>
-                <line>29</line>
+                <line>30</line>
                 <key/>
             </bookmark>
         </file>
@@ -16,9 +16,11 @@
             <file>file:/C:/Users/jafidiesel/Documents/git/aplicacionredes/Otros%20trabajos/ChatSockets/src/cliente/PrincipalChat.java</file>
             <file>file:/C:/Users/jafidiesel/Documents/git/aplicacionredes/Otros%20trabajos/ChatSockets/src/servidor/ThreadEnvia.java</file>
             <file>file:/C:/Users/jafidiesel/Documents/git/aplicacionredes/Otros%20trabajos/ChatSockets/src/servidor/ThreadRecibe.java</file>
+            <file>file:/C:/Users/jafidiesel/Documents/git/aplicacionredes/Otros%20trabajos/ChatSockets/src/servidor/RecibirArchivo.java</file>
             <file>file:/C:/Users/jafidiesel/Documents/git/aplicacionredes/Otros%20trabajos/ChatSockets/src/servidor/PrincipalChat.java</file>
             <file>file:/C:/Users/jafidiesel/Documents/git/aplicacionredes/Otros%20trabajos/ChatSockets/src/cliente/ThreadRecibe.java</file>
             <file>file:/C:/Users/jafidiesel/Documents/git/aplicacionredes/Otros%20trabajos/ChatSockets/src/cliente/ThreadEnvia.java</file>
+            <file>file:/C:/Users/jafidiesel/Documents/git/aplicacionredes/Otros%20trabajos/ChatSockets/src/cliente/EnviarArchivo.java</file>
         </group>
     </open-files>
 </project-private>

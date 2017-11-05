@@ -56,6 +56,7 @@ public class PrincipalChat extends JFrame{
         
         //Crea menu Archivo y submenu Salir, ademas agrega el submenu al menu
         JMenu menuArchivo = new JMenu("Archivo"); 
+        
         JMenuItem salir = new JMenuItem("Salir");
         //menuArchivo.add(salir); //Agrega el submenu Salir al menu menuArchivo
         
